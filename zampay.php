@@ -36,6 +36,18 @@ class zampay
         return $this;
     }
 
+    public function setBody()
+    {
+        $data =  array(
+            'amount' => $this->Amount, 
+            'externalId' => $this->external_id,
+            'payer' => array(
+                'partyIdType' => 'MSISDN',
+                'partyId' => $this->phone
+            ),
+        );
+        $this->body = json_encode($data);
+    }
 }
 
 
