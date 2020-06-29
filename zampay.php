@@ -3,12 +3,12 @@
 class zampay
 
 {
-    protected $user;
-    protected $password;
-    protected $msisd;
-    protected $shortcode;
-    protected $trasactionid;
-    protected $amount;
+    protected $ThirdPartyID;
+    protected $Password;
+    protected $Msisdn;
+    protected $Shortcode;
+    protected $Trasactionid;
+    protected $Amount;
 }
 
 public function __construct($password, $msisd, $shortcode )
