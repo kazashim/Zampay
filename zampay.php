@@ -9,12 +9,16 @@ class zampay
     protected $Shortcode;
     protected $Trasactionid;
     protected $Amount;
-}
 
-public function __construct($ThirdPartyID, $password, $msisd, $shortcode )
-
-{
     
+    public function __construct($ThirdPartyID, $password, $msisd, $shortcode )
+
+    {
+        
+    }
+    
+
 }
+
 
 ?>
