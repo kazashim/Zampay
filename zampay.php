@@ -11,7 +11,7 @@ class zampay
     protected $Amount;
 }
 
-public function __construct($password, $msisd, $shortcode )
+public function __construct($ThirdPartyID, $password, $msisd, $shortcode )
 
 {
     
