@@ -1,5 +1,5 @@
 <?php 
-
+require_once( MOMOPAY_PLUGIN_DIR_PATH . 'mtn-momopay-php-sdk/vendor/autoload.php' );
 class zampay
 
 {
@@ -21,6 +21,18 @@ class zampay
         $this->Msisdn =  $Msisdn;
         $this->Shortcode = $Shortcode;
 
+        // create a log channel
+        $log = new Logger('zamtel/momopay');
+        $this->logger = $log;
+        $log->pushHandler(new RotatingFileHandler('momopay.log', 90, Logger::DEBUG));
+
+        // logs
+        $this->logger->notice('Momopay Class Initializes....');
+
+        $this->setEventHandler($event_handler);
+        $this->setAccessToken();
+
+        return $this;
     }
     
 
