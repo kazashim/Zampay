@@ -24,6 +24,18 @@ class zampay
     }
     
 
+    public function setAmount($Amount)
+    {
+        $this->Amount = $Amount;
+        return $this;
+    }
+
+    public function setMsisdn($Msisdn)
+    {
+        $this->Msisdn = $Msisdn;
+        return $this;
+    }
+
 }
 
 
