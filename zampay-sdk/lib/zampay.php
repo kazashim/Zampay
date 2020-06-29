@@ -1,7 +1,7 @@
 <?php 
 namespace ZAMPAY
 
-require_once( MOMOPAY_PLUGIN_DIR_PATH . 'mtn-momopay-php-sdk/vendor/autoload.php' );
+require_once( MOMOPAY_PLUGIN_DIR_PATH . 'zampay-sdk/vendor/autoload.php' );
 
 
 use GuzzleHttp\Client;
