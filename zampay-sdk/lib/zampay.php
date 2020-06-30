@@ -37,8 +37,6 @@ class zampay
         // logs
         $this->logger->notice('Zampay Class Initializes....');
 
-        $this->setEventHandler($event_handler);
-        $this->setAccessToken();
 
         return $this;
     }
