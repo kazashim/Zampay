@@ -54,3 +54,15 @@ function zampay_init_gateway_class() {
 
     if ( !class_exists( 'WC_Payment_Gateway' ) ) return;
 
+    class WC_Momopay_Gateway extends WC_Payment_Gateway {
+
+        /**
+         * Class constructor, more about it in Step 3
+         */
+        public function __construct()
+        {
+            $this->id = 'zampay'; // payment gateway plugin ID
+            $this->icon = plugins_url('assets/img/momopay.png', __FILE__);
+            $this->has_fields = true; // in case you need a custom credit card form
+            $this->method_title = __('ZamPay', 'zampay-payments');
+            $this->method_description = __('ZamPay allows you to accept payment from Zamtel mobile subscribers .', 'zampay-payments'); // will be displayed on the options page
