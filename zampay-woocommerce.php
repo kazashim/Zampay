@@ -46,3 +46,11 @@ function zampay_plugin_action_links( $links ) {
 
 }
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'zampay_plugin_action_links' );
+
+/**
+ *
+ */
+function zampay_init_gateway_class() {
+
+    if ( !class_exists( 'WC_Payment_Gateway' ) ) return;
+
