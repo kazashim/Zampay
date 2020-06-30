@@ -30,3 +30,19 @@ function zampaypay_add_gateway_class($gateways ) {
  */
 add_action( 'plugins_loaded', 'zampay_init_gateway_class' );
 
+/**
+ * Add the Settings link to the plugin
+ *
+ * @param  array $links Existing links on the plugin page
+ *
+ * @return array          Existing links with our settings link added
+ */
+function zampay_plugin_action_links( $links ) {
+
+    $zampay_settings_url = esc_url( get_admin_url( null, 'admin.php?page=wc-settings&tab=checkout&section=zampay' ) );
+    array_unshift( $links, "<a title='ZamPay Settings Page' href='$zampay_settings_url'>Settings</a>" );
+
+    return $links;
+
+}
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'zampay_plugin_action_links' );
