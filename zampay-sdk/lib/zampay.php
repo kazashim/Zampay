@@ -32,10 +32,10 @@ class zampay
         // create a log channel
         $log = new Logger('zamtel/momopay');
         $this->logger = $log;
-        $log->pushHandler(new RotatingFileHandler('momopay.log', 90, Logger::DEBUG));
+        $log->pushHandler(new RotatingFileHandler('zampay.log', 90, Logger::DEBUG));
 
         // logs
-        $this->logger->notice('Momopay Class Initializes....');
+        $this->logger->notice('Zampay Class Initializes....');
 
         $this->setEventHandler($event_handler);
         $this->setAccessToken();
