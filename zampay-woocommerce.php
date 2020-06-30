@@ -12,7 +12,7 @@ define( 'ZAMPAY_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
 require_once( ZAMPAY_PLUGIN_DIR_PATH . 'zampay-sdk/lib/Zampaypay.php' );
 require_once( ZAMPAY_PLUGIN_DIR_PATH . 'zampay-sdk/lib/EventHandlerInterface.php' );
-
+require_once( ZAMPAY_PLUGIN_DIR_PATH . 'zampay-sdk/lib/ZampayEventHandler.php')
 use Zamtel\ZampayEventHandler;
 use Zamtel\Zampay;
 
