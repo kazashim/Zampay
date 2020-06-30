@@ -1,6 +1,6 @@
 {
   "name": "cynojine/Zamtel-momo",
-  "description": "SDK for integrating to Zamtel's MomoPay payment gateway",
+  "description": "SDK for integrating to Zamtel's Zampay payment gateway",
   "type": "library",
   "require": {
     "monolog/monolog": "1.*",

@@ -1,5 +1,5 @@
 <?php 
-namespace ZAMPAY
+namespace ZAMPAY;
 
 require_once( MOMOPAY_PLUGIN_DIR_PATH . 'zampay-sdk/vendor/autoload.php' );
 
@@ -69,6 +69,7 @@ class zampay
         $this->body = json_encode($data);
     }
 }
+
 
 
 ?>
