@@ -7,3 +7,5 @@
  * Version: 1.0.0
  * License: GNU GPLv3
  */
+
+define( 'MOMOPAY_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
