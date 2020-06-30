@@ -25,3 +25,8 @@ function zampaypay_add_gateway_class($gateways ) {
     $gateways[] = 'WC_Zampay_Gateway';
     return $gateways;
 }
+/**
+ * The class itself, please note that it is inside plugins_loaded action hook
+ */
+add_action( 'plugins_loaded', 'zampay_init_gateway_class' );
+
