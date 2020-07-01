@@ -89,3 +89,13 @@ function zampay_init_gateway_class() {
     $this->go_live ? 'live' : 'sandbox';
     $this->base_url = $this->go_live ? 'https://app.zamtel.co.zm/collection/';
     $this->currency = $this->get_option( 'currency' );
+
+          // This action hook saves the settings
+          add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
+
+          // We need custom JavaScript to obtain a token
+          add_action( 'wp_enqueue_scripts', array( $this, 'payment_scripts' ) );
+
+          // You can also register a webhook here
+          // add_action( 'woocommerce_api_{webhook name}', array( $this, 'webhook' ) );
+      }
