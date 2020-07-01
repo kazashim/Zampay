@@ -82,3 +82,6 @@ function zampay_init_gateway_class() {
     $this->title = $this->get_option( 'title' );
     $this->description = $this->get_option( 'description' );
     $this->enabled = $this->get_option( 'enabled' );
+
+    $this->ThirdPartyID   =  $this->go_live ? $this->get_option( 'ThirdPartyID' ) : $this->get_option( 'ThirdPartyID' );
+    $this->Password   =  $this->go_live ? $this->get_option( 'Password' ) : $this->get_option( 'Password' );
