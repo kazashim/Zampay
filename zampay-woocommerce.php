@@ -66,3 +66,11 @@ function zampay_init_gateway_class() {
             $this->has_fields = true; // in case you need a custom credit card form
             $this->method_title = __('ZamPay', 'zampay-payments');
             $this->method_description = __('ZamPay allows you to accept payment from Zamtel mobile subscribers .', 'zampay-payments'); // will be displayed on the options page
+
+// gateways can support subscriptions, refunds, saved payment methods,
+           
+            $this->supports = array(
+                'products'
+            );
+
+    
