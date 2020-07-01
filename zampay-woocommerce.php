@@ -82,6 +82,10 @@ function zampay_init_gateway_class() {
     $this->title = $this->get_option( 'title' );
     $this->description = $this->get_option( 'description' );
     $this->enabled = $this->get_option( 'enabled' );
+    $this->go_live = 'yes' === $this->get_option( 'go_live' );
 
     $this->ThirdPartyID   =  $this->go_live ? $this->get_option( 'ThirdPartyID' ) : $this->get_option( 'ThirdPartyID' );
     $this->Password   =  $this->go_live ? $this->get_option( 'Password' ) : $this->get_option( 'Password' );
+    $this->go_live ? 'live' : 'sandbox';
+    $this->base_url = $this->go_live ? 'https://app.zamtel.co.zm/collection/';
+    $this->currency = $this->get_option( 'currency' );
