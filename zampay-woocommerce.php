@@ -73,4 +73,12 @@ function zampay_init_gateway_class() {
                 'products'
             );
 
-    
+    // Method with all the options fields
+    $this->init_form_fields();
+
+    // Load the settings.
+    $this->init_settings();
+
+    $this->title = $this->get_option( 'title' );
+    $this->description = $this->get_option( 'description' );
+    $this->enabled = $this->get_option( 'enabled' );
